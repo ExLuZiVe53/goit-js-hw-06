@@ -7,48 +7,32 @@ const ingredients = [
   'Condiments',
 ];
 
-const list = document.querySelector('#ingredients');
+const navItem = document.querySelector('#ingredients');
 
 const potatoes = document.createElement('li');
-potatoes.textContent = 'Potatoes';
+potatoes.textContent = ingredients[0];
 potatoes.classList.add('item');
-// list.append('potatoes');
-
-console.log(potatoes);
 
 const mushrooms = document.createElement('li');
-mushrooms.textContent = 'Mushrooms';
+mushrooms.textContent = ingredients[1];
 mushrooms.classList.add('item');
-// list.append('mushrooms');
-
-console.log(mushrooms);
 
 const garlic = document.createElement('li');
-garlic.textContent = 'Garlic';
+garlic.textContent = ingredients[2];
 garlic.classList.add('item');
-// list.append('garlic');
-
-console.log(garlic);
 
 const tomatos = document.createElement('li');
-tomatos.textContent = 'Tomatos';
+tomatos.textContent = ingredients[3];
 tomatos.classList.add('item');
-// list.append('tomatos');
-
-console.log(tomatos);
 
 const herbs = document.createElement('li');
-herbs.textContent = 'Herbs';
+herbs.textContent = ingredients[4];
 herbs.classList.add('item');
-// list.append('herbs');
-
-console.log(herbs);
 
 const condiments = document.createElement('li');
-condiments.textContent = 'Condiments';
+condiments.textContent = ingredients[5];
 condiments.classList.add('item');
-// list.append('condiments');
 
-console.log(condiments);
+navItem.append(potatoes, mushrooms, garlic, tomatos, herbs, condiments);
 
-list.append('potatoes, mushrooms, garlic, tomatos, herbs, condiments');
+console.log(navItem);
