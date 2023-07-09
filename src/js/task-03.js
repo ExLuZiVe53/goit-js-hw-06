@@ -13,6 +13,10 @@ const images = [
   },
 ];
 
+// listWithId.style.textTransform = 'uppercase';
+// listWithId.style.fontSize = '24px';
+// console.log(listWithId);
+
 const container = document.querySelector('.gallery');
 
 const markup = images
@@ -20,4 +24,4 @@ const markup = images
   .join('');
 
 container.insertAdjacentHTML('beforeend', markup);
-console.dir(markup);
+console.log(markup);
