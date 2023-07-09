@@ -20,4 +20,4 @@ const markup = images.map(
 );
 
 container.insertAdjacentHTML('beforeend', markup);
-console.log(markup);
+console.dir(markup);
