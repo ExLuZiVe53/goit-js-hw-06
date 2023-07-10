@@ -24,4 +24,6 @@ const markup = images
   .join('');
 
 container.insertAdjacentHTML('beforeend', markup);
-console.log(markup);
+console.dir(markup);
+
+container.
