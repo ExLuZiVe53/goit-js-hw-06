@@ -15,10 +15,10 @@
 
 const CounterPlugin = function ({
   rootSelector,
-  initialValue = 0,
+  counterValue = 0,
   step = 1,
 } = {}) {
-  this._value = initialValue;
+  this._value = counterValue;
   this._step = step;
   this._refs = this._getRefs(rootSelector);
 
