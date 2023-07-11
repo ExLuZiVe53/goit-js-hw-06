@@ -20,9 +20,10 @@ const CounterPlugin = function ({
 } = {}) {
   this._value = initialValue;
   this._step = step;
-
   this._refs = this._getRefs(rootSelector);
-  this._bindEvents;
+
+  this._bindEvents();
+  this.updateValueUI();
 };
 
 CounterPlugin.prototype._getRefs = function (rootSelector) {
@@ -30,22 +31,22 @@ CounterPlugin.prototype._getRefs = function (rootSelector) {
   refs.container = document.querySelector(rootSelector);
   refs.incrementBtn = refs.container.querySelector('[data-action="increment"]');
   refs.decrementBtn = refs.container.querySelector('[data-action="decrement"]');
-  console.log(refs.decrementBtn);
   refs.value = refs.container.querySelector('#value');
 
+  console.log(refs);
   return refs;
 };
 
 CounterPlugin.prototype._bindEvents = function () {
   this._refs.incrementBtn.addEventListener('click', () => {
     console.log('CounterPlugin.prototype._bindEvents => this', this);
-    this.increment();
+    this.decrement();
     this.updateValueUI();
   });
 
   this._refs.decrementBtn.addEventListener('click', () => {
     console.log('CounterPlugin.prototype._bindEvents => this', this);
-    this.decrement();
+    this.increment();
     this.updateValueUI();
   });
 };
@@ -55,11 +56,11 @@ CounterPlugin.prototype.updateValueUI = function () {
 };
 
 CounterPlugin.prototype.increment = function () {
-  this._value += this._step;
-};
-
-CounterPlugin.prototype.decrement = function () {
   this._value -= this._step;
 };
 
-new CounterPlugin({ rootSelector: '#counter', step: 2 });
+CounterPlugin.prototype.decrement = function () {
+  this._value += this._step;
+};
+
+new CounterPlugin({ rootSelector: '#counter', step: 1 });
