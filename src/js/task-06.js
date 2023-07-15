@@ -1,6 +1,7 @@
 const inputChange = document.getElementById('validation-input');
+console.log(inputChange);
 
-form.elements.pass.addEventListener('blur', onBlur);
+inputChange.addEventListener('blur', onBlur);
 
 function onBlur(e) {
   const length = e.target.value.length;
