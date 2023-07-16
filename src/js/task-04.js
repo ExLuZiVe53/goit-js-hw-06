@@ -49,3 +49,22 @@ CounterPlugin.prototype.decrement = function () {
 };
 
 new CounterPlugin({ rootSelector: '#counter', step: 1 });
+
+// const newDecr = document.querySelector('button[data-action = "increment"]');
+// const newIncr = document.querySelector('button[data-action = "decrement"]');
+// const value = document.querySelector('#value');
+// console.log(value);
+// let counterValue = 0;
+
+// function decrement(e) {
+//   counterValue -= 1;
+//   value.textContent = counterValue;
+// }
+
+// function increment(e) {
+//   counterValue += 1;
+//   value.textContent = counterValue;
+// }
+
+// newDecr.addEventListener = ('click', decrement);
+// newIncr.addEventListener = ('click', increment);
