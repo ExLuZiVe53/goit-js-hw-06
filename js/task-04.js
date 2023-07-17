@@ -50,11 +50,14 @@ CounterPlugin.prototype.decrement = function () {
 
 new CounterPlugin({ rootSelector: '#counter', step: 1 });
 
-// const newDecr = document.querySelector('button[data-action = "increment"]');
 // const newIncr = document.querySelector('button[data-action = "decrement"]');
+// const newDecr = document.querySelector('button[data-action = "increment"]');
 // const value = document.querySelector('#value');
 // console.log(value);
 // let counterValue = 0;
+
+// newDecr.addEventListener = ('click', decrement);
+// newIncr.addEventListener = ('click', increment);
 
 // function decrement(e) {
 //   counterValue -= 1;
@@ -65,6 +68,3 @@ new CounterPlugin({ rootSelector: '#counter', step: 1 });
 //   counterValue += 1;
 //   value.textContent = counterValue;
 // }
-
-// newDecr.addEventListener = ('click', decrement);
-// newIncr.addEventListener = ('click', increment);
